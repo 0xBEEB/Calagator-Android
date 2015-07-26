@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/ColorPrimary</item>
+        <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
+        <item name="colorAccent">@color/ColorPrimaryDark</item>
+    </style>
+
+    <style name="CalagatorToolBarTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:textColorPrimaryInverse">@android:color/white</item>
+        <item name="android:actionMenuTextColor">@android:color/white</item>
+        <item name="android:textColorSecondaryInverse">@android:color/white</item>
+        <item name="colorAccent">@color/ColorPrimaryDark</item>
+    </style>
+
+    <style name="SearchToolbarTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/ColorPrimary</item>
+        <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
+        <item name="colorAccent">@color/ColorPrimaryDark</item>
+    </style>
+
+    <style name="TitleGone" parent="Base.TextAppearance.AppCompat.Title">
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="FabStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:src">@drawable/abc_ic_search_api_mtrl_alpha</item>
+        <item name="borderWidth">0dp</item>
+        <item name="elevation">6dp</item>
+        <item name="pressedTranslationZ">12dp</item>
+        <item name="rippleColor">@android:color/white</item>
+    </style>
+
+</resources>
