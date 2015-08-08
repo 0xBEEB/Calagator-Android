@@ -57,7 +57,14 @@ public abstract class BaseEventListActivity extends AppCompatActivity {
   }
 
   private void refreshEvents() {
-    swipeRefresh.setRefreshing(true);
+    swipeRefresh.post(new Runnable() {
+      @Override
+      public void run() {
+        if (swipeRefresh != null) {
+          swipeRefresh.setRefreshing(true);
+        }
+      }
+    });
 
     GetEventsTask task = new GetEventsTask() {
 

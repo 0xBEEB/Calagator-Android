@@ -456,4 +456,16 @@ public class Venue {
     public void setEventsCount(Integer eventsCount) {
         this.eventsCount = eventsCount;
     }
+
+    public String getStaticMapURL() {
+      if(latitude == null || longitude == null) {
+        return null;
+      }
+
+      String url =  "https://maps.googleapis.com/maps/api/staticmap?";
+      url += "center=" + latitude + "," + longitude;
+      url += "&markers=color:red%7C" + latitude + "," + longitude;
+      url += "&zoom=16&size=300x300";
+      return url;
+    }
 }

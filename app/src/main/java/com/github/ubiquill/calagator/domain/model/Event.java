@@ -288,5 +288,4 @@ public class Event {
 
       return DateHelper.fromISOTimeStamp(getEndTime());
     }
-
 }

@@ -56,6 +56,8 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/bottom_area"
+            android:visibility="gone"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -90,14 +92,15 @@
                         android:layout_height="wrap_content"/>
 
                 </LinearLayout>
-                <LinearLayout
+                <ImageView
+                    android:id="@+id/map"
                     android:orientation="vertical"
+                    android:scaleType="centerCrop"
                     android:layout_weight="1"
                     android:layout_width="0dp"
-                    android:background="@color/ColorPrimaryDark"
                     android:layout_height="match_parent">
 
-                </LinearLayout>
+                </ImageView>
 
             </LinearLayout>
             <LinearLayout
@@ -142,24 +145,28 @@
 
             </LinearLayout>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp"
+                android:textSize="12sp"
+                android:text="@string/event_details"
+                />
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardCornerRadius="4dp"
-                android:layout_margin="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
                 android:padding="8dp">
                 <LinearLayout
                     android:orientation="vertical"
                     android:padding="16dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="12sp"
-                        android:text="@string/event_details"
-                        />
                     <TextView
                         android:id="@+id/eventDetails"
                         android:layout_width="match_parent"
