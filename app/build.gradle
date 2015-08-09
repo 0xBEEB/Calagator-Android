@@ -5,7 +5,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "com.github.ubiquill.calagator"
+        applicationId "com.github.ubiquill.calagator4android"
         minSdkVersion 14
         targetSdkVersion 22
         versionCode 1
