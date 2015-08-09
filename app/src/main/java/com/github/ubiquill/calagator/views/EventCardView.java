@@ -15,71 +15,75 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * Created by ubiquill on 7/22/15.
+ * Created by Briar Rose Schreiber <ubiquill@riseup.net> on 7/22/15.
  */
 public class EventCardView extends RecyclerView.ViewHolder {
 
-  @Bind(R.id.date_header) protected TextView dateHeader;
-  @Bind(R.id.card_view)   protected CardView cardView;
-  @Bind(R.id.title)       protected TextView cardTitle;
-  @Bind(R.id.time)        protected TextView cardTime;
-  @Bind(R.id.venue)       protected TextView cardVenue;
+    @Bind(R.id.date_header)
+    protected TextView dateHeader;
+    @Bind(R.id.card_view)
+    protected CardView cardView;
+    @Bind(R.id.title)
+    protected TextView cardTitle;
+    @Bind(R.id.time)
+    protected TextView cardTime;
+    @Bind(R.id.venue)
+    protected TextView cardVenue;
 
-  int eventId;
-  Context context;
+    int eventId;
+    Context context;
 
-  public EventCardView(View view, Context context) {
-    super(view);
-    this.context = context;
-    this.eventId = -1;
-    ButterKnife.bind(this, view);
+    public EventCardView(View view, Context context) {
+        super(view);
+        this.context = context;
+        this.eventId = -1;
+        ButterKnife.bind(this, view);
 
-    setCardViewOnClickListener();
-  }
-
-  public CardView getCardView() {
-    return cardView;
-  }
-
-  public TextView getCardTitle() {
-    return cardTitle;
-  }
-
-  public TextView getDateHeader() {
-    return dateHeader;
-  }
-
-  public TextView getCardVenue() {
-    return cardVenue;
-  }
-
-  public TextView getCardTime() {
-    return cardTime;
-  }
-
-  public void setEventId(int eventId) {
-    this.eventId = eventId;
-  }
-
-  public void setCardViewOnClickListener() {
-    getCardView().setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        if (eventId < 0) {
-          return;
-        }
-        Intent eventDetailIntent = new Intent(context, EventDetailsActivity.class);
-        eventDetailIntent.putExtra("eventId", eventId);
-        context.startActivity(eventDetailIntent);
-      }
-    });
-  }
-
-
-  public static String getVenueString(Event event) {
-    if (event.getVenue() != null && event.getVenue().getTitle() != null) {
-      return event.getVenue().getTitle();
+        setCardViewOnClickListener();
     }
-    return "";
-  }
+
+    public static String getVenueString(Event event) {
+        if (event.getVenue() != null && event.getVenue().getTitle() != null) {
+            return event.getVenue().getTitle();
+        }
+        return "";
+    }
+
+    public CardView getCardView() {
+        return cardView;
+    }
+
+    public TextView getCardTitle() {
+        return cardTitle;
+    }
+
+    public TextView getDateHeader() {
+        return dateHeader;
+    }
+
+    public TextView getCardVenue() {
+        return cardVenue;
+    }
+
+    public TextView getCardTime() {
+        return cardTime;
+    }
+
+    public void setEventId(int eventId) {
+        this.eventId = eventId;
+    }
+
+    public void setCardViewOnClickListener() {
+        getCardView().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (eventId < 0) {
+                    return;
+                }
+                Intent eventDetailIntent = new Intent(context, EventDetailsActivity.class);
+                eventDetailIntent.putExtra("eventId", eventId);
+                context.startActivity(eventDetailIntent);
+            }
+        });
+    }
 }

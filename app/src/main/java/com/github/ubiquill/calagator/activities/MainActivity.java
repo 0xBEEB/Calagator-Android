@@ -13,48 +13,50 @@ import com.github.ubiquill.calagator.R;
 import butterknife.Bind;
 
 public class MainActivity extends BaseEventListActivity
-                          implements AppBarLayout.OnOffsetChangedListener {
+        implements AppBarLayout.OnOffsetChangedListener {
 
-  @Bind(R.id.appbar) AppBarLayout appbar;
-  @Bind(R.id.collapsing_toolbar) CollapsingToolbarLayout collapsingToolbar;
-  @Bind(R.id.search_button) FloatingActionButton searchButton;
+    @Bind(R.id.appbar)
+    AppBarLayout appbar;
+    @Bind(R.id.collapsing_toolbar)
+    CollapsingToolbarLayout collapsingToolbar;
+    @Bind(R.id.search_button)
+    FloatingActionButton searchButton;
+    View.OnClickListener searchClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent searchIntent = new Intent(getApplicationContext(), SearchEventsActivity.class);
+            startActivity(searchIntent);
+        }
+    };
 
-  @Override
-  protected int setContentView() {
-    return R.layout.activity_main;
-  }
-
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-
-    collapsingToolbar.setTitle(getResources().getString(R.string.app_name));
-    searchButton.setOnClickListener(searchClickListener);
-  }
-
-  @Override
-  public void onOffsetChanged(AppBarLayout appBarLayout, int i) {
-    swipeRefresh.setEnabled(i == 0);
-  }
-
-  @Override
-  protected void onResume() {
-    super.onResume();
-    appbar.addOnOffsetChangedListener(this);
-  }
-
-  @Override
-  protected void onPause() {
-    super.onPause();
-    appbar.removeOnOffsetChangedListener(this);
-  }
-
-  View.OnClickListener searchClickListener = new View.OnClickListener() {
     @Override
-    public void onClick(View v) {
-      Intent searchIntent = new Intent(getApplicationContext(), SearchEventsActivity.class);
-      startActivity(searchIntent);
+    protected int setContentView() {
+        return R.layout.activity_main;
     }
-  };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        collapsingToolbar.setTitle(getResources().getString(R.string.app_name));
+        searchButton.setOnClickListener(searchClickListener);
+    }
+
+    @Override
+    public void onOffsetChanged(AppBarLayout appBarLayout, int i) {
+        swipeRefresh.setEnabled(i == 0);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        appbar.addOnOffsetChangedListener(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        appbar.removeOnOffsetChangedListener(this);
+    }
 
 }

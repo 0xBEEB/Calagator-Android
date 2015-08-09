@@ -8,30 +8,29 @@ import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.ISODateTimeFormat;
 
 /**
- * Created by ubiquill on 7/23/15.
+ * Created by Briar Rose Schreiber <ubiquill@riseup.net> on 7/23/15.
  */
 public class DateHelper {
 
-  public static DateTime fromISOTimeStamp(String ts) {
-    DateTimeFormatter parser = ISODateTimeFormat.dateTime();
-    DateTime dt = parser.parseDateTime(ts);
-    return dt;
-  }
-
-  public static String getEventTimeString(Event event) {
-    String timeString = "";
-
-    if (event.getStartTime() != null) {
-      LocalDateTime dtStart = event.getStartDate().toLocalDateTime();
-      timeString += dtStart.toString("hh:mm aa");
+    public static DateTime fromISOTimeStamp(String ts) {
+        DateTimeFormatter parser = ISODateTimeFormat.dateTime();
+        return parser.parseDateTime(ts);
     }
 
-    if (event.getEndTime() != null) {
-      timeString += " - ";
-      LocalDateTime dtEnd = event.getEndDate().toLocalDateTime();
-      timeString += dtEnd.toString("hh:mm aa");
-    }
+    public static String getEventTimeString(Event event) {
+        String timeString = "";
 
-    return timeString;
-  }
+        if (event.getStartTime() != null) {
+            LocalDateTime dtStart = event.getStartDate().toLocalDateTime();
+            timeString += dtStart.toString("hh:mm aa");
+        }
+
+        if (event.getEndTime() != null) {
+            timeString += " - ";
+            LocalDateTime dtEnd = event.getEndDate().toLocalDateTime();
+            timeString += dtEnd.toString("hh:mm aa");
+        }
+
+        return timeString;
+    }
 }

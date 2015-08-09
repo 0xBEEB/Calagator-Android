@@ -4,6 +4,7 @@
     <item
         android:id="@+id/action_insert_calendar"
         app:showAsAction="always"
-        android:title="Add to Calendar"/>
+        android:title="@string/add_to_calendar"
+        android:icon="@drawable/ic_action_calaction"/>
 
 </menu>

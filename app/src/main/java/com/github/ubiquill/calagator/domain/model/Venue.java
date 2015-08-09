@@ -3,9 +3,6 @@ package com.github.ubiquill.calagator.domain.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by ubiquill on 7/20/15.
- */
 public class Venue {
 
     @Expose
@@ -62,410 +59,322 @@ public class Venue {
     private Integer eventsCount;
 
     /**
-     *
-     * @return
-     * The id
+     * @return The id
      */
     public Integer getId() {
-      return id;
+        return id;
     }
 
     /**
-     *
-     * @param id
-     * The id
+     * @param id The id
      */
     public void setId(Integer id) {
-      this.id = id;
+        this.id = id;
     }
 
     /**
-     *
-     * @return
-     * The title
+     * @return The title
      */
     public String getTitle() {
-      return title;
+        return title;
     }
 
     /**
-     *
-     * @param title
-     * The title
+     * @param title The title
      */
     public void setTitle(String title) {
-      this.title = title;
+        this.title = title;
     }
 
     /**
-     *
-     * @return
-     * The description
+     * @return The description
      */
     public String getDescription() {
-      return description;
+        return description;
     }
 
     /**
-     *
-     * @param description
-     * The description
+     * @param description The description
      */
     public void setDescription(String description) {
-      this.description = description;
+        this.description = description;
     }
 
     /**
-     *
-     * @return
-     * The address
+     * @return The address
      */
     public String getAddress() {
-      return address;
+        return address;
     }
 
     /**
-     *
-     * @param address
-     * The address
+     * @param address The address
      */
     public void setAddress(String address) {
-      this.address = address;
+        this.address = address;
     }
 
     /**
-     *
-     * @return
-     * The url
+     * @return The url
      */
     public String getUrl() {
-      return url;
+        return url;
     }
 
     /**
-     *
-     * @param url
-     * The url
+     * @param url The url
      */
     public void setUrl(String url) {
-      this.url = url;
+        this.url = url;
     }
 
     /**
-     *
-     * @return
-     * The createdAt
+     * @return The createdAt
      */
     public String getCreatedAt() {
-      return createdAt;
+        return createdAt;
     }
 
     /**
-     *
-     * @param createdAt
-     * The created_at
+     * @param createdAt The created_at
      */
     public void setCreatedAt(String createdAt) {
-      this.createdAt = createdAt;
+        this.createdAt = createdAt;
     }
 
     /**
-     *
-     * @return
-     * The updatedAt
+     * @return The updatedAt
      */
     public String getUpdatedAt() {
-      return updatedAt;
+        return updatedAt;
     }
 
     /**
-     *
-     * @param updatedAt
-     * The updated_at
+     * @param updatedAt The updated_at
      */
     public void setUpdatedAt(String updatedAt) {
-      this.updatedAt = updatedAt;
+        this.updatedAt = updatedAt;
     }
 
     /**
-     *
-     * @return
-     * The streetAddress
+     * @return The streetAddress
      */
     public String getStreetAddress() {
-      return streetAddress;
+        return streetAddress;
     }
 
     /**
-     *
-     * @param streetAddress
-     * The street_address
+     * @param streetAddress The street_address
      */
     public void setStreetAddress(String streetAddress) {
-      this.streetAddress = streetAddress;
+        this.streetAddress = streetAddress;
     }
 
     /**
-     *
-     * @return
-     * The locality
+     * @return The locality
      */
     public String getLocality() {
-      return locality;
+        return locality;
     }
 
     /**
-     *
-     * @param locality
-     * The locality
+     * @param locality The locality
      */
     public void setLocality(String locality) {
-      this.locality = locality;
+        this.locality = locality;
     }
 
     /**
-     *
-     * @return
-     * The region
+     * @return The region
      */
     public String getRegion() {
-      return region;
+        return region;
     }
 
     /**
-     *
-     * @param region
-     * The region
+     * @param region The region
      */
     public void setRegion(String region) {
-      this.region = region;
+        this.region = region;
     }
 
     /**
-     *
-     * @return
-     * The postalCode
+     * @return The postalCode
      */
     public String getPostalCode() {
-      return postalCode;
+        return postalCode;
     }
 
     /**
-     *
-     * @param postalCode
-     * The postal_code
+     * @param postalCode The postal_code
      */
     public void setPostalCode(String postalCode) {
-      this.postalCode = postalCode;
+        this.postalCode = postalCode;
     }
 
     /**
-     *
-     * @return
-     * The country
+     * @return The country
      */
     public String getCountry() {
-      return country;
+        return country;
     }
 
     /**
-     *
-     * @param country
-     * The country
+     * @param country The country
      */
     public void setCountry(String country) {
-      this.country = country;
+        this.country = country;
     }
 
     /**
-     *
-     * @return
-     * The latitude
+     * @return The latitude
      */
     public String getLatitude() {
-      return latitude;
+        return latitude;
     }
 
     /**
-     *
-     * @param latitude
-     * The latitude
+     * @param latitude The latitude
      */
     public void setLatitude(String latitude) {
-      this.latitude = latitude;
+        this.latitude = latitude;
     }
 
     /**
-     *
-     * @return
-     * The longitude
+     * @return The longitude
      */
     public String getLongitude() {
-      return longitude;
+        return longitude;
     }
 
     /**
-     *
-     * @param longitude
-     * The longitude
+     * @param longitude The longitude
      */
     public void setLongitude(String longitude) {
-      this.longitude = longitude;
+        this.longitude = longitude;
     }
 
     /**
-     *
-     * @return
-     * The email
+     * @return The email
      */
     public String getEmail() {
-      return email;
+        return email;
     }
 
     /**
-     *
-     * @param email
-     * The email
+     * @param email The email
      */
     public void setEmail(String email) {
-      this.email = email;
+        this.email = email;
     }
 
     /**
-     *
-     * @return
-     * The telephone
+     * @return The telephone
      */
     public String getTelephone() {
         return telephone;
     }
 
     /**
-     *
-     * @param telephone
-     * The telephone
+     * @param telephone The telephone
      */
     public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
 
     /**
-     *
-     * @return
-     * The sourceId
+     * @return The sourceId
      */
     public Object getSourceId() {
         return sourceId;
     }
 
     /**
-     *
-     * @param sourceId
-     * The source_id
+     * @param sourceId The source_id
      */
     public void setSourceId(Object sourceId) {
         this.sourceId = sourceId;
     }
 
     /**
-     *
-     * @return
-     * The duplicateOfId
+     * @return The duplicateOfId
      */
     public Object getDuplicateOfId() {
         return duplicateOfId;
     }
 
     /**
-     *
-     * @param duplicateOfId
-     * The duplicate_of_id
+     * @param duplicateOfId The duplicate_of_id
      */
     public void setDuplicateOfId(Object duplicateOfId) {
         this.duplicateOfId = duplicateOfId;
     }
 
     /**
-     *
-     * @return
-     * The closed
+     * @return The closed
      */
     public Boolean getClosed() {
         return closed;
     }
 
     /**
-     *
-     * @param closed
-     * The closed
+     * @param closed The closed
      */
     public void setClosed(Boolean closed) {
         this.closed = closed;
     }
 
     /**
-     *
-     * @return
-     * The wifi
+     * @return The wifi
      */
     public Boolean getWifi() {
         return wifi;
     }
 
     /**
-     *
-     * @param wifi
-     * The wifi
+     * @param wifi The wifi
      */
     public void setWifi(Boolean wifi) {
         this.wifi = wifi;
     }
 
     /**
-     *
-     * @return
-     * The accessNotes
+     * @return The accessNotes
      */
     public String getAccessNotes() {
         return accessNotes;
     }
 
     /**
-     *
-     * @param accessNotes
-     * The access_notes
+     * @param accessNotes The access_notes
      */
     public void setAccessNotes(String accessNotes) {
         this.accessNotes = accessNotes;
     }
 
     /**
-     *
-     * @return
-     * The eventsCount
+     * @return The eventsCount
      */
     public Integer getEventsCount() {
         return eventsCount;
     }
 
     /**
-     *
-     * @param eventsCount
-     * The events_count
+     * @param eventsCount The events_count
      */
     public void setEventsCount(Integer eventsCount) {
         this.eventsCount = eventsCount;
     }
 
     public String getStaticMapURL() {
-      if(latitude == null || longitude == null) {
-        return null;
-      }
+        if (latitude == null || longitude == null) {
+            return null;
+        }
 
-      String url =  "https://maps.googleapis.com/maps/api/staticmap?";
-      url += "center=" + latitude + "," + longitude;
-      url += "&markers=color:red%7C" + latitude + "," + longitude;
-      url += "&zoom=16&size=300x300";
-      return url;
+        String url = "https://maps.googleapis.com/maps/api/staticmap?";
+        url += "center=" + latitude + "," + longitude;
+        url += "&markers=color:red%7C" + latitude + "," + longitude;
+        url += "&zoom=16&size=300x300";
+        return url;
     }
 }

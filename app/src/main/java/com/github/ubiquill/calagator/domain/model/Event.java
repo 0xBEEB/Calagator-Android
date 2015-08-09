@@ -53,239 +53,239 @@ public class Event {
      * @return The id
      */
     public Integer getId() {
-      return id;
+        return id;
     }
 
     /**
      * @param id The id
      */
     public void setId(Integer id) {
-      this.id = id;
+        this.id = id;
     }
 
     /**
      * @return The title
      */
     public String getTitle() {
-      return title;
+        return title;
     }
 
     /**
      * @param title The title
      */
     public void setTitle(String title) {
-      this.title = title;
+        this.title = title;
     }
 
     /**
      * @return The description
      */
     public String getDescription() {
-      return description;
+        return description;
     }
 
     /**
      * @param description The description
      */
     public void setDescription(String description) {
-      this.description = description;
+        this.description = description;
     }
 
     /**
      * @return The startTime
      */
     public String getStartTime() {
-      return startTime;
+        return startTime;
     }
 
     /**
      * @param startTime The start_time
      */
     public void setStartTime(String startTime) {
-      this.startTime = startTime;
+        this.startTime = startTime;
     }
 
     /**
      * @return The url
      */
     public String getUrl() {
-      return url;
+        return url;
     }
 
     /**
      * @param url The url
      */
     public void setUrl(String url) {
-      this.url = url;
+        this.url = url;
     }
 
     /**
      * @return The createdAt
      */
     public String getCreatedAt() {
-      return createdAt;
+        return createdAt;
     }
 
     /**
      * @param createdAt The created_at
      */
     public void setCreatedAt(String createdAt) {
-      this.createdAt = createdAt;
+        this.createdAt = createdAt;
     }
 
     /**
      * @return The updatedAt
      */
     public String getUpdatedAt() {
-      return updatedAt;
+        return updatedAt;
     }
 
     /**
      * @param updatedAt The updated_at
      */
     public void setUpdatedAt(String updatedAt) {
-      this.updatedAt = updatedAt;
+        this.updatedAt = updatedAt;
     }
 
     /**
      * @return The venueId
      */
     public Integer getVenueId() {
-      return venueId;
+        return venueId;
     }
 
     /**
      * @param venueId The venue_id
      */
     public void setVenueId(Integer venueId) {
-      this.venueId = venueId;
+        this.venueId = venueId;
     }
 
     /**
      * @return The sourceId
      */
     public Object getSourceId() {
-      return sourceId;
+        return sourceId;
     }
 
     /**
      * @param sourceId The source_id
      */
     public void setSourceId(Object sourceId) {
-      this.sourceId = sourceId;
+        this.sourceId = sourceId;
     }
 
     /**
      * @return The duplicateOfId
      */
     public Object getDuplicateOfId() {
-      return duplicateOfId;
+        return duplicateOfId;
     }
 
     /**
      * @param duplicateOfId The duplicate_of_id
      */
     public void setDuplicateOfId(Object duplicateOfId) {
-      this.duplicateOfId = duplicateOfId;
+        this.duplicateOfId = duplicateOfId;
     }
 
     /**
      * @return The endTime
      */
     public String getEndTime() {
-      return endTime;
+        return endTime;
     }
 
     /**
      * @param endTime The end_time
      */
     public void setEndTime(String endTime) {
-      this.endTime = endTime;
+        this.endTime = endTime;
     }
 
     /**
      * @return The version
      */
     public Object getVersion() {
-      return version;
+        return version;
     }
 
     /**
      * @param version The version
      */
     public void setVersion(Object version) {
-      this.version = version;
+        this.version = version;
     }
 
     /**
      * @return The rrule
      */
     public Object getRrule() {
-      return rrule;
+        return rrule;
     }
 
     /**
      * @param rrule The rrule
      */
     public void setRrule(Object rrule) {
-      this.rrule = rrule;
+        this.rrule = rrule;
     }
 
     /**
      * @return The venueDetails
      */
     public String getVenueDetails() {
-      return venueDetails;
+        return venueDetails;
     }
 
     /**
      * @param venueDetails The venue_details
      */
     public void setVenueDetails(String venueDetails) {
-      this.venueDetails = venueDetails;
+        this.venueDetails = venueDetails;
     }
 
     /**
      * @return The locked
      */
     public Boolean getLocked() {
-      return locked;
+        return locked;
     }
 
     /**
      * @param locked The locked
      */
     public void setLocked(Boolean locked) {
-      this.locked = locked;
+        this.locked = locked;
     }
 
     /**
      * @return The venue
      */
     public Venue getVenue() {
-      return venue;
+        return venue;
     }
 
     /**
      * @param venue The venue
      */
     public void setVenue(Venue venue) {
-      this.venue = venue;
+        this.venue = venue;
     }
 
     public DateTime getStartDate() {
-      if (getStartTime() == null) {
-        return null;
-      }
+        if (getStartTime() == null) {
+            return null;
+        }
 
-      return DateHelper.fromISOTimeStamp(getStartTime());
+        return DateHelper.fromISOTimeStamp(getStartTime());
     }
 
     public DateTime getEndDate() {
-      if (getEndTime() == null) {
-        return null;
-      }
+        if (getEndTime() == null) {
+            return null;
+        }
 
-      return DateHelper.fromISOTimeStamp(getEndTime());
+        return DateHelper.fromISOTimeStamp(getEndTime());
     }
 }
