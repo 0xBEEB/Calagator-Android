@@ -2,6 +2,7 @@
 *.iml
 .DS_Store
 /captures
+keystore.jks
 
 # Built application files
 *.apk
