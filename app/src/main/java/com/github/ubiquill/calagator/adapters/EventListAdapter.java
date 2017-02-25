@@ -14,6 +14,7 @@ import org.joda.time.LocalDate;
 import org.joda.time.LocalDateTime;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -25,6 +26,7 @@ public class EventListAdapter extends RecyclerView.Adapter<EventCardView> {
     private List<Event> eventList;
 
     public EventListAdapter(List<Event> eventList) {
+        Collections.sort(eventList);
         this.eventList = removePastEvents(eventList);
     }
 
@@ -77,9 +79,7 @@ public class EventListAdapter extends RecyclerView.Adapter<EventCardView> {
     }
 
     public void updateList(List<Event> events) {
-        this.eventList = new ArrayList<>();
-        notifyDataSetChanged();
-
+        Collections.sort(events);
         this.eventList = removePastEvents(events);
         notifyDataSetChanged();
     }

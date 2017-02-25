@@ -11,11 +11,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.github.ubiquill.calagator.R;
+import com.github.ubiquill.calagator.adapters.EventListAdapter;
 import com.github.ubiquill.calagator.async.GetEventsTask;
 import com.github.ubiquill.calagator.domain.api.CalagatorSearchParams;
 import com.github.ubiquill.calagator.domain.api.CalagatorSearchParamsBuilder;
 import com.github.ubiquill.calagator.domain.model.Event;
 
+import java.util.Collections;
 import java.util.List;
 
 import butterknife.Bind;
@@ -56,6 +58,7 @@ public class SearchEventsActivity extends BaseEventListActivity {
     }
 
     private void handleSearch(String query) {
+        eventListAdapter.updateList(Collections.EMPTY_LIST);
         CalagatorSearchParams params;
         if (query == null || query.length() < 1) {
             params = null;

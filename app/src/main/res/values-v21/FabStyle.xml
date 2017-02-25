@@ -4,7 +4,10 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">16dp</item>
-        <item name="android:src">@drawable/abc_ic_search_api_mtrl_alpha</item>
+        <item name="android:src">@android:drawable/ic_menu_search</item>
+        <item name="android:color">@android:color/white</item>
+        <item name="android:tint">@android:color/white</item>
+        <item name="backgroundTint">@color/ColorPrimaryDark</item>
         <item name="borderWidth">0dp</item>
         <item name="elevation">8dp</item>
         <item name="pressedTranslationZ">12dp</item>

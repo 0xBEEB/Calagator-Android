@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name="com.github.ubiquill.calagator.activities.MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -21,6 +22,7 @@
         <activity android:name="com.github.ubiquill.calagator.activities.SearchEventsActivity"
                   android:label=""
                   android:launchMode="singleTop"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
                   android:parentActivityName="com.github.ubiquill.calagator.activities.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
@@ -41,6 +43,7 @@
         <activity android:name="com.github.ubiquill.calagator.activities.EventDetailsActivity"
                   android:label="@string/app_name"
                   android:launchMode="singleTop"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
                   android:parentActivityName="com.github.ubiquill.calagator.activities.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

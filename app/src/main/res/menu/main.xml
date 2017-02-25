@@ -6,7 +6,6 @@
         android:id="@+id/action_search"
         android:orderInCategory="100"
         android:title="Search"
-        android:icon="@drawable/abc_ic_search_api_mtrl_alpha"
-        app:showAsAction="ifRoom"
-        ></item>
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="ifRoom" />
 </menu>

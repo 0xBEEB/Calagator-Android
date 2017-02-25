@@ -62,11 +62,6 @@ public abstract class BaseEventListActivity extends AppCompatActivity {
                 refreshEvents();
             }
         });
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
         refreshEvents();
     }
 

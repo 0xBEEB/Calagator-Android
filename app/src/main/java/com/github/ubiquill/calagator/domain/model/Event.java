@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 
 import org.joda.time.DateTime;
 
-public class Event {
+public class Event implements Comparable<Event> {
 
     @Expose
     private Integer id;
@@ -287,5 +287,10 @@ public class Event {
         }
 
         return DateHelper.fromISOTimeStamp(getEndTime());
+    }
+
+    @Override
+    public int compareTo(Event o) {
+        return this.getStartDate().compareTo(o.getStartDate());
     }
 }
