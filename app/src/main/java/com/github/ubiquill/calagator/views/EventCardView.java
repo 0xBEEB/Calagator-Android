@@ -86,4 +86,8 @@ public class EventCardView extends RecyclerView.ViewHolder {
             }
         });
     }
+
+    public void clearAnimations() {
+        cardView.clearAnimation();
+    }
 }

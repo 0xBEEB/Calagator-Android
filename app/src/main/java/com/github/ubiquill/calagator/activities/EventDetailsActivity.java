@@ -101,8 +101,14 @@ public class EventDetailsActivity extends AppCompatActivity {
         if (event.getEndDate() != null) {
             intent.putExtra("endTime", event.getEndDate().toDateTime().getMillis());
         }
-        intent.putExtra("title", event.getTitle());
-        intent.putExtra("eventLocation", event.getVenue().getStreetAddress());
+        if (event.getTitle() != null) {
+            intent.putExtra("title", event.getTitle());
+        } else {
+            intent.putExtra("title", "Event");
+        }
+        if (event.getVenue() != null && event.getVenue().getStreetAddress() != null) {
+            intent.putExtra("eventLocation", event.getVenue().getStreetAddress());
+        }
         startActivity(intent);
     }
 }

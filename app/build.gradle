@@ -5,12 +5,26 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        applicationId "com.github.ubiquill.calagator4android"
         minSdkVersion 14
         targetSdkVersion 25
-        versionCode 2
-        versionName "1.1"
     }
+
+    productFlavors {
+        calagator {
+            applicationId "com.github.ubiquill.calagator4android"
+            versionCode 3
+            versionName "1.2"
+            buildConfigField 'String', 'APIBASE', '"http://calagator.org"'
+        }
+
+        pdxactivist {
+            applicationId "com.github.ubiquill.pdxactivist4android"
+            versionCode 1
+            versionName "1.0"
+            buildConfigField 'String', 'APIBASE', '"http://portlandactivist.org"'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false

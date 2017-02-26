@@ -29,7 +29,7 @@ public class GetEventsTask extends AsyncTask<Void, Void, List<Event>> {
     protected List<Event> doInBackground(Void... params) {
         CalagatorService service = ServiceGenerator.createService(
                 CalagatorService.class,
-                Config.CALAGATOR_URL);
+                Config.API_BASE);
         if (calagatorParams == null) {
             return service.getEvents();
         } else {

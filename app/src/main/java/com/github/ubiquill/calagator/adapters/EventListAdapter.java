@@ -1,9 +1,12 @@
 package com.github.ubiquill.calagator.adapters;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import com.github.ubiquill.calagator.R;
 import com.github.ubiquill.calagator.domain.model.Event;
@@ -24,8 +27,11 @@ public class EventListAdapter extends RecyclerView.Adapter<EventCardView> {
 
     private static LocalDate today = new LocalDate();
     private List<Event> eventList;
+    private Context context;
+    private int lastPosition = -1;
 
-    public EventListAdapter(List<Event> eventList) {
+    public EventListAdapter(Context context, List<Event> eventList) {
+        this.context = context;
         Collections.sort(eventList);
         this.eventList = removePastEvents(eventList);
     }
@@ -71,11 +77,19 @@ public class EventListAdapter extends RecyclerView.Adapter<EventCardView> {
         eventCardView.getCardTitle().setText(event.getTitle());
         eventCardView.getCardTime().setText(DateHelper.getEventTimeString(event));
         eventCardView.getCardVenue().setText(EventCardView.getVenueString(event));
+
+        setAnimation(eventCardView.itemView, position);
     }
 
     @Override
     public int getItemCount() {
         return eventList.size();
+    }
+
+    @Override
+    public void onViewDetachedFromWindow(EventCardView holder) {
+        super.onViewDetachedFromWindow(holder);
+        holder.clearAnimations();
     }
 
     public void updateList(List<Event> events) {
@@ -93,5 +107,16 @@ public class EventListAdapter extends RecyclerView.Adapter<EventCardView> {
             }
         }
         return cleanedEvents;
+    }
+
+    private void setAnimation(View viewToAnimate, int position)
+    {
+        // If the bound view wasn't previously displayed on screen, it's animated
+        if (position > lastPosition)
+        {
+            Animation animation = AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
+            viewToAnimate.startAnimation(animation);
+            lastPosition = position;
+        }
     }
 }

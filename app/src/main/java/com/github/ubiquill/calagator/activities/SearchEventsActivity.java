@@ -50,6 +50,13 @@ public class SearchEventsActivity extends BaseEventListActivity {
         handleIntent(intent);
     }
 
+    @Override
+    protected boolean isRefreshable() {
+        swipeRefresh.setEnabled(false);
+        return false;
+    }
+
+
     private void handleIntent(Intent intent) {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);

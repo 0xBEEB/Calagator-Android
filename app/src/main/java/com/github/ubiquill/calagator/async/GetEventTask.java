@@ -23,7 +23,7 @@ public class GetEventTask extends AsyncTask<Void, Void, Event> {
     protected Event doInBackground(Void... params) {
         CalagatorService service = ServiceGenerator.createService(
                 CalagatorService.class,
-                Config.CALAGATOR_URL);
+                Config.API_BASE);
         return service.getEvent(eventId);
     }
 }

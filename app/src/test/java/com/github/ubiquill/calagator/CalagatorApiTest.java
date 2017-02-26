@@ -14,7 +14,7 @@ import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
-import static com.github.ubiquill.calagator.utils.Config.CALAGATOR_URL;
+import static com.github.ubiquill.calagator.utils.Config.API_BASE;
 
 /**
  * Created by ubiquill on 7/20/15.
@@ -25,7 +25,7 @@ public class CalagatorApiTest extends TestCase {
   @Override
   protected void setUp() throws Exception {
     super.setUp();
-    service = ServiceGenerator.createService(CalagatorService.class, CALAGATOR_URL);
+    service = ServiceGenerator.createService(CalagatorService.class, API_BASE);
   }
 
   @Override

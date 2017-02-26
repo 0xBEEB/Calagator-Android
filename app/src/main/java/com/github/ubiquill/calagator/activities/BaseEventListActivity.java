@@ -47,22 +47,23 @@ public abstract class BaseEventListActivity extends AppCompatActivity {
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         eventList.setLayoutManager(llm);
-        eventListAdapter = new EventListAdapter(new ArrayList<Event>());
+        eventListAdapter = new EventListAdapter(this, new ArrayList<Event>());
         eventList.setAdapter(eventListAdapter);
-        eventList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            }
-        });
 
+        if (isRefreshable()) {
+            swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+                @Override
+                public void onRefresh() {
+                    refreshEvents();
+                }
+            });
+            refreshEvents();
+        }
+    }
 
-        swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                refreshEvents();
-            }
-        });
-        refreshEvents();
+    protected boolean isRefreshable() {
+        swipeRefresh.setEnabled(true);
+        return true;
     }
 
     private void refreshEvents() {
